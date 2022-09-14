@@ -1211,11 +1211,12 @@ footer .footer__bottom .footer__right a {
   background-position: center;
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   font-family: "Sora", sans-serif;
+  z-index: 1111;
 }
 .log__in .login__content {
   display: flex;
@@ -1488,7 +1489,7 @@ footer .footer__bottom .footer__right a {
   font-size: 16px;
 }
 .admin__content .admin__right .menu__analys .sale__report table tr td {
-  margin: 10px 0;
+  line-height: 40px;
 }
 .admin__content .admin__right .menu__analys .sale__report table tr:nth-child(1) {
   font-weight: 700;

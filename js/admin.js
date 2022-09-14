@@ -148,6 +148,8 @@ function detail(k) {
     document.querySelector('.receipt').classList.add('d-block');
     document.querySelector('.prt').classList.remove('hind2');
     document.querySelector('.out').classList.remove('visi');
+    let content8=`<i>Ngày 14 tháng 09 năm 2022</i>`
+    console.log(listOder[k].date)
     let content7 = `
      <p><b>Họ tên người mua hàng:</b> ${listOder[k].firstname} ${listOder[k].lastname} </p>
      <p><b>Tên đơn vị: </b>${listOder[k].company}</p>
@@ -225,6 +227,7 @@ function detail(k) {
     `
     document.querySelector('.table__receipt').innerHTML = content6;
     document.querySelector('.receipt__info2').innerHTML = content7;
+    document.querySelector('.dayreceipt').innerHTML = content8;
 
 }
 
@@ -545,8 +548,8 @@ function saleReport() {
         <td>${i+1}</td>
         <td>${saleReport[i].name}</td>
         <td>${saleReport[i].quanlity}</td>
-        <td>${saleReport[i].price}</td>
-        <td>${saleReport[i].getPrice()}</td>
+        <td>${Number(saleReport[i].price).toFixed(2)}</td>
+        <td>${Number(saleReport[i].getPrice()).toFixed(2)}</td>
         <td></td>
     </tr>
     `
