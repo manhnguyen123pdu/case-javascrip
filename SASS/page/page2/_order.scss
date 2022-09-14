@@ -1,0 +1,131 @@
+.ordervisivle{
+position: fixed;
+top: 0;
+display: block!important;
+}
+.order{ 
+    background-color: gray;
+    padding: 40px 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 111;
+    display: none;
+  .order__content{
+    display: flex;
+    max-width: 1200px;
+    margin:  auto;
+    background-color: white;
+    padding: 30px;
+    hr{
+        margin: 12px 0;
+    }
+    h4{
+        @include fontext(32px, 600,#0b3954);
+        padding:15px 0;
+    }
+    label {
+        display: block;
+      }
+      input{
+        margin: 10px 10px 10px 0;
+        display: block;
+        width: 100%;
+        padding: 10px 0 10px 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #174b69;
+        color: white;
+        &::placeholder{
+            color: white;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        &:focus{
+            outline: none;
+        }
+      }
+      textarea{
+        width: 100%;
+        background-color: #174b69;
+        color: white;
+        &::placeholder{
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        &:focus{
+            outline: none;
+        }
+      }
+      .order__left{
+        flex:1;
+        padding: 20px;
+        .name{
+            width: 100%;
+            display: flex;
+            .fisrtname{
+                width: 50%;
+                padding-right: 20px;
+            }
+           .lastname{
+                width: 50%;
+                padding-left: 20px;
+            }
+        }
+      }
+      .order__right{
+          flex:1;
+          padding: 20px;
+        .order__content{
+            flex:1;
+            padding: 30px;
+            background-color: #f0efef;
+            display: inline-block;
+            h4{
+                text-align: center;
+            }
+            .item,.oder__item{
+                display: flex;
+                justify-content: space-between;
+                padding: 18px 0;
+            }
+            >.item:first-of-type,.item:last-of-type{
+               p{
+                @include fontext(20px, 700,#0b3954);
+               }
+            }
+            >span{
+                display: block;
+                margin: 15px;
+                padding: 10px;
+                border: 1px solid #c7c7c7;
+                color: #5c676d;
+            }
+            >p{
+                padding: 10px 0;
+                color: #5c676d;
+                a{
+                    color:#ffb128;
+                }
+            }
+            button:first-of-type{
+                display: block;
+                @extend .btn;
+                background-color: #ffb128;
+                width: 100%;
+                padding: 15px;
+                margin: 15px 0;
+                color: white;
+            }
+            >a{
+                display: block;
+                text-align: center;
+                color: #5c676d;
+            }
+            
+        }
+      }
+  }
+}

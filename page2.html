@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- header -->
+
+    <header>
+        <!-- <div class="shadow"></div> -->
+        <div class="header__top">
+            <div class="headertop__left">
+                <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                    alt="">
+            </div>
+            <div class="search">
+                <button><i class="fa fa-search"></i></button>
+                <input placeholder="What are you looking for ?" type="text">
+            </div>
+            <div class="headertop__right">
+                <i onclick="viewcart()" class="fa fa-shopping-cart"></i>
+                <p>$0.00</p>
+                <div class="wish">
+                    <i class="fa fa-heart"></i>
+                    <sup class="wishitem">0</sup>
+                </div>
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <div class="shopcart">
+            <div class="shop__top">
+                <i onclick="out()" class="fa fa-times out"></i>
+                <i class="fa fa-suitcase-rolling"></i>
+                <h5>Cart</h5>
+            </div>
+            <hr>
+            <div class="shop__items"></div>
+            <div class="shop__order">
+                <div class="Subtotal">
+                    <p>Subtotal:</p>
+                    <span class="Subtotall"></span>
+                </div>
+                <div class="Total">
+                    <p>Total:</p>
+                    <span class="total">0</span>
+                </div>
+                <button onclick="order()" class="proceed">Proceed to checkout</button>
+                <button>View cart</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category1.svg"
+                        alt="">
+                    <p>CHAIRS</p>
+                    <div class="overlay__nav ov1">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Fancy chair</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$1550.00</span>
+                            <img style="width: 220px; top: 25%"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic1.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category2.svg"
+                        alt="">
+                    <p>BEDS</p>
+                    <div class="overlay__nav ov1">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Modern grey sofa</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$2350.00</span>
+                            <img style="width: 330px; top: 50%"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic2.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category3.svg"
+                        alt="">
+                    <p>TABLE</p>
+                    <div class="overlay__nav ov1">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Circle corners table</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$850.00</span>
+                            <img style="width: 220px; top: 40%"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic3.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category4.svg"
+                        alt="">
+                    <p>DESKS</p>
+                    <div class="overlay__nav ov1">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Fancy chair</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$1550.00</span>
+                            <img style="width: 250px; top: 55%; right: -50px;"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic4.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category5.svg"
+                        alt="">
+                    <p>CABINETS</p>
+                    <div class="overlay__nav">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Fancy chair</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$1550.00</span>
+                            <img style="width: 220px; top: 40%;"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic5.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-category6.svg"
+                        alt="">
+                    <p>LIGHTING</p>
+                    <div class="overlay__nav">
+                        <div class="navoverlay__left">
+                            <ul>
+                                <li>
+                                    <p>ARMCHAIRS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>BAR STOOLS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHARS PADS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>CHAISE LOUGES</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DESK CHAIR</p><i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <p>DINNING CHARS</p><i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="navoverlay__right">
+                            <P>WE RECOMMEND</P>
+                            <P>Fancy chair</P>
+                            <span>Rutrum non id sem turpis elementum vel id. Magna.</span>
+                            <span>$1550.00</span>
+                            <img style="width: 250px; top: 40%"
+                                src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-megamenu-pic6.webp"
+                                alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-star"></i>
+                    <p>SELES</p>
+
+                </li>
+            </ul>
+
+
+        </nav>
+        <div class="nav2">
+            <div class="nav2__left">
+                <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                    alt="">
+            </div>
+            <div class="nav2__right">
+                <i class="fa fa-bars"></i>
+
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        <h1>Wishlist</h1>
+        <div class="bread">
+            <span>Home </span> <i class="fa fa-angle-right"></i> <span>Wishlist</span>
+        </div>
+    </div>
+    <section class="content">
+
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer__sign">
+            <div class="footersign__left">
+                <h5>Subscribe to our newsletter</h5>
+                <span>and grab</span> <span> 30% OFF!</span>
+                <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-newsletter-pic1.webp"
+                    alt="">
+            </div>
+            <div class="footersign__right">
+                <input placeholder="Your e-mail address..." type="text">
+                <button>SIGN UP</button>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__left">
+                <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                    alt="">
+                <p>Quam pulvinar leo euismod id eu ultricies. Placerat proin rhoncus sit.</p>
+                <button>CONTACT US</button>
+                <div class="bank">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/themes/betheme/images/payment-methods/Visa.svg"
+                        alt="">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/themes/betheme/images/payment-methods/Mastercard.svg"
+                        alt="">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/themes/betheme/images/payment-methods/PayPal.svg"
+                        alt="">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/themes/betheme/images/payment-methods/GooglePay.svg"
+                        alt="">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/themes/betheme/images/payment-methods/ApplePay.svg"
+                        alt="">
+                </div>
+            </div>
+            <div class="footer__mid1">
+                <p>USEFUL LINKS</p>
+                <ul>
+                    <li>HOME</li>
+                    <li>SHOP</li>
+                    <li>COLLECTIONS</li>
+                    <li> ABOUT</li>
+                    <li>CONTACT</li>
+                </ul>
+                <p> DELIVERY</p>
+                <ul>
+                    <li>HOW IT WORKS</li>
+                    <li>FREE DELIVERY</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="footer__mid2">
+                <p>CUSTOMER SERVICE</p>
+                <ul>
+                    <li>ORDERS</li>
+                    <li>DOWNLOADS</li>
+                    <li>ADDRESSES</li>
+                    <li>ACCOUNT DETAILS</li>
+                    <li>LOST PASSWORD</li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <p>NEED HELP?</p>
+                <ul>
+                    <li><a href="">+61 3 8376 6284</a></li>
+                    <li><a href="">+61 3 8376 6284</a></li>
+                    <li>
+                        <p>MONDAY-FRIDAY</p>
+                        8AM - 5PM
+                    </li>
+                    <li>
+                        <p>SATURDAY-SUNDAY</p>
+                        10AM - 2PM
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <section class="order">
+
+        <div class="order__content">
+            <p style="cursor: pointer;" onclick="outoder()"><i class="fa fa-times"></i></p>
+            <div class="order__left">
+                <h4>Billing details</h4>
+                <div class="name">
+                    <div class="fisrtname">
+                        <label for="">First name *</label>
+                        <input id="firstname" type="text">
+                    </div>
+                    <div class="lastname">
+                        <label for="lastname">Last name *</label>
+                        <input id="lastname" type="text">
+                    </div>
+                </div>
+                <label for="company">Company name (optional)
+                </label>
+                <input id="company" type="text">
+                <label for="Country">Country / Region *
+                </label>
+                <input placeholder="United States(US)" id="Country" type="text">
+                <label for="Country">Street address *
+                </label>
+                <input placeholder="House number and street name " id="street" type="text">
+                <label for="Country">Phone number *
+                </label>
+                <input placeholder="Phone Number" id="apartment" type="tel">
+                <label for="date">Date *
+                </label>
+                <input id="date" type="date">
+                <h4>Additional information</h4>
+                <label for="">
+                </label>
+                <textarea id="addinfo" placeholder="Note about your order, e.g. spacial note for delivery." name="" id=""
+                    rows="10"></textarea>
+            </div>
+            <div class="order__right">
+                <div class="order__content">
+                    <h4>Your order</h4>
+                    <div class="item">
+                        <p>Product</p>
+                        <p>Subtotal</p>
+                    </div>
+                    <hr>
+                    <div class="list__order">
+                      
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <p>Total</p>
+                        <p class="totalOrder">sadf</p>
+                    </div>
+                    <span>Sorry, it seems that there are no available payment methods for your state. Please contact us
+                        if you require assistance or wish to make alternate arrangements.</span>
+                    <p>Your personal data will be used to process your order, support your experience throughout this
+                        website, and for other purposes described in our <a href="">privacy policy</a>.</p>
+                    <button  onclick="done()" >Place order</button>
+                    <a href="">Return to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/doneOder.js"></script>
+    <script src="./js/page2.js"></script>
+    <script src="./js/both.js"></script>
+</body>
+
+</html>

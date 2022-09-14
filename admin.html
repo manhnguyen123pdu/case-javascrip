@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+
+<body>
+
+    <div class="log__in">
+        <div class="login__content">
+            <h1>Admin Furniture</h1>
+            <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                alt="">
+            <div class="login">
+                <p>Log-in</p>
+                <label for=""> Acount
+                </label>
+                <input id="acount" type="email">
+                <label for=""> Password
+                </label>
+                <input id="password" type="password">
+                <button onclick="login()">Log-in</button>
+                <a href=""> Fogot your acount</a>
+            </div>
+        </div>
+    </div>
+    <div class="admin__content">
+        <div class="admin__menu">
+            <div class="admin__menu__top">
+                <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                    alt="">
+                <i class="fa fa-bars"></i>
+            </div>
+            <hr>
+            <h5>Menu</h5>
+            <ul>
+                <li onclick="menuProduct()">Product</li>
+                <li onclick="menuanlys()">Managerment</li>
+                <li>Chat box</li>
+                <li onclick="menupurch()" >Purches Order </li>
+            </ul>
+        </div>
+        <div class="admin__right">
+
+            <!-- menu product -->
+            <div class="menu__product">
+                <div class="head__product">
+                    <div class="head__product__left">
+                        <h4>Product Website</h4>
+                        <p>This is an example dashboard created using build-in elements and components.</p>
+                    </div>
+                    <div class="head__product__right">
+                        <i class="fa fa-bell"></i>
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-sign-out-alt"></i>
+                    </div>
+                </div>
+                <!-- list__item -->
+                <div class="list__item">
+                    <div class="list__content">
+                        <button onclick="showInsert()">Insert Product</button>
+                        <table class="listAdmin" border="1px" cellspacing="0px" width="100%"></table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- menu purchase -->
+            <div class="menu__purchase">
+                <div class="menu__purchase__content">
+                    <h4>Order List Product</h4>
+                    <table class="listpurch" border="1px" cellspacing="0" width="100%">
+                       
+                    </table>
+                </div>
+            </div>
+
+            <!-- menu analys -->
+            <div class="menu__analys d-block">
+                <h4>Analysis business</h4>
+                <div class="container">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="sale__report">
+                    <h5>Doanh thu chi tiết</h5>
+                    <select onchange="saleReport()" name="" id="saledetail">
+                    <option value="january">January</option> 
+                    <option value="february">February</option> 
+                    <option value="march">March</option> 
+                    <option value="april">April</option> 
+                    <option value="may">May</option> 
+                    <option value="june">June</option> 
+                    <option value="july">July</option> 
+                    <option value="august">August</option> 
+                    <option value="september">September</option> ,
+                    <option value="october">October</option> 
+                    <option value="november">November</option> 
+                    <option value="december">December</option> 
+                    </select>
+                    <table id="sale__table" border="1" cellspacing="0" width="100%"1>
+                        
+                    </table>
+                  
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <button style="z-index: 11;  position: fixed; right: 0;" onclick="reset()">reset</button>
+
+    </div>
+    
+    <div class="insert__product">
+        <div class="insert__content">
+            <h4>Insert product</h4>
+            <label for="">
+                <p>Name</p>
+                <input id="name" type="text">
+            </label>
+            <label for="">
+                <p>Image</p>
+                <input id="image" type="text">
+            </label>
+            <label for="">
+                <p>Price</p>
+                <input id="price" type="text">
+            </label>
+            <label for="">
+                <p>Discount</p>
+                <input id="discount" type="text">
+            </label>
+            <label for="">
+                <p>Catarary</p>
+                <input id="cata" type="text">
+            </label>
+            <label for="">
+                <p>Vote</p>
+                <input id="vote" type="text">
+            </label>
+            <button onclick="insert()">Insert</button>
+        </div>
+
+    </div>
+
+    <div class="receipt scroll">
+        <button class="prt" onclick="print2(),window.print()">Print </button>
+         
+        <i onclick="outReceipt()" class=" out fa fa-times"></i>
+        <div class="receipt__content">
+            <div class="receipt__header">
+                <div class="receipt__left">
+                    <img src="https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore.svg"
+                        alt="">
+                </div>
+                <div class="receipt__mid">
+                    <h5>HÓA ĐƠN BÁN HÀNG</h5>
+                    <p><i>(Bản thể hiện của hóa đơn điện tử)</i></p>
+                    <p><i>Ngày 13 tháng 11 năm 2022</i></p>
+                </div>
+                <div class="receipt__right">
+                    <P>Mẫu số: 01GTKT0/001</P>
+                    <p>Ký hiệu:MS 1 SE</p>
+                    <p>Số:</p>
+                </div>
+            </div>
+            <hr>
+            <div class="receipt__info">
+                <h4> FURNITURE JOINT STOCK COMPANY</h4>
+                <p><b>Mã số thuế:</b> 01012324522-104</p>
+                <p><b>Địa chỉ: </b> Tầng 10 Techsoft, Cầu Giấy, Hà Nội</p>
+                <p><b>Điện thoại:</b> (024) 794898</p>
+                <p><b>Số tài khoản:</b></p>
+            </div>
+            <hr>
+            <div class="receipt__info receipt__info2">
+               
+            </div>
+            <div class="receipt__item">
+                <table class="table__receipt" border="1px" cellspacing="0" width="100%">
+                    <!-- <tr>
+                        <th>STT</th>
+                        <th>Tên hàng hóa, dịch vụ</th>
+                        <th>Đơn vị tính</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá </th>
+                        <th>Thành tiền</th>
+                    </tr>
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3=1x2</th>
+                    </tr>
+                     danh sách hàng 
+                    <tr>
+                        <td>1</td>
+                        <td>điện thoại</td>
+                        <td> cái</td>
+                        <td>01</td>
+                        <td>2.050.000</td>
+                        <td>2.050.000</td>
+                    </tr> -->
+
+                    <!-- tống tiền -->
+                    
+            </table>
+        </div>
+            <div class="receipt__footer">
+                <div class="receipt__footer__left">
+                    <h5>Người mua hàng</h5>
+                    <span>(Ký ghi rõ họ tên)</span>
+                </div>
+                <div class="receipt__footer__right">
+                    <h5>Người bán hàng</h5>
+                    <span>(Ký ghi rõ họ tên)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+   <script src="./js/report.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/both.js"></script>
+    <script src="./js/admin.js"></script>
+
+</body>
+
+</html>

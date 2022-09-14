@@ -1,0 +1,53 @@
+.content {
+    .item {
+        padding: 50px 0;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        font-family: "Sora", sans-serif;
+        img {
+            width: 280px;
+            padding-right:20px;
+        }
+        .right {
+            width: 60%;
+            > a {
+                @include fontext(32px, 800, #0b3954);
+            }
+            h2 {
+                @include fontext(30px, 500, #ffb12b);
+                margin: 15px 0;
+            }
+            p {
+                @include fontext(16px, normal, #5c676d);
+                margin: 15px 0;
+                a {
+                    text-decoration: none;
+                    color: #ffb12b;
+                }
+            }
+            span {
+                display: inline-block;
+                padding: 3px 5px;
+                border-radius: 5px;
+                @include fontext(13px, normal, #a8a8a8);
+                border: 1px solid #a8a8a8;
+            }
+            #tag {
+                color: black;
+                background-color: #ece8e8;
+                padding: 3px 6px;
+            }
+        }
+        .but {
+            width: 25%;
+            text-align: center;
+            button {
+                @extend .btn;
+                background-color: #ffb12b;
+                color: white;
+            }
+        }
+    }
+}

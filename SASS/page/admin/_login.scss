@@ -1,0 +1,72 @@
+.log__in {
+    background-image: linear-gradient(#0b39540b, #0b39542e),
+        url(https://themes.muffingroup.com/be/furniturestore/wp-content/uploads/2022/06/furniturestore-slider-pic1.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-family: "Sora", sans-serif;
+    .login__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: #ffb128;
+        }
+        img {
+            width: 500px;
+            padding: 20px 0;
+        }
+        .login {
+            padding: 50px;
+            background-color: rgba(100, 97, 74, 0.629);
+            p{
+                color: #ffb128;
+                font-size: 30px;
+                text-align: center;
+                font-weight: 700;
+            }
+            label {
+                display: block;
+                padding: 10px;
+                color: #1c0b79;
+                font-weight: 600;
+            }
+            input {
+                display: block;
+                padding: 10px;
+                border: none;
+                width: 300px;
+                border-radius: 5px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button{
+                @extend .btn;
+                background-color: #ffb128;
+                color: white;
+                width: 100%;
+                padding: 15px 0;
+                margin: 15px 0;
+            }
+            a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding-top: 10px;
+            }
+            margin-bottom: 50px;
+        }
+
+    }
+}
+
+.hind{
+    display:  none;
+}

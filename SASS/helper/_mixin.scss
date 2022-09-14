@@ -1,0 +1,17 @@
+@mixin fontext($fs,$fw,$cl) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $cl;
+}
+
+@mixin responsive($screen){
+    @if(map-has-key($map: $breadpoint, $key: $screen)){
+        $value: map-get($map: $breadpoint, $key: $screen);
+        @media screen and (max-width:$value) {
+            @content;
+        }
+    }
+    @else{
+        @warn('ko có ')
+    }
+}

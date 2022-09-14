@@ -1,0 +1,94 @@
+.product {
+    .product__content {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-family: "Sora", sans-serif;
+        .product__item {
+            width: 32%;
+            position: relative;
+            padding: 20px 0;
+            margin: 15px 0;
+            background-color: #e6e6e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            .puch {
+                position: absolute;
+                right: 30px;
+                display: flex;
+                flex-direction: column;
+                .puch__item{
+                    position: relative;
+                    display: flex;
+                    justify-content: end;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    &:hover span{
+                        opacity: 1;
+                    }
+                    i {
+                        background-color: white;
+                        display: block;
+                        margin: 5px 0;
+                        text-align: center;
+                        line-height: 40px;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        font-size: 14px;
+                        &:hover {
+                            color: #ffb128;
+                            transition: 0.4s;
+                        }
+                    }
+                    span {
+                        margin: 0 5px;
+                        @include fontext(13px, normal, white );
+                        background-color: black;
+                        padding: 5px 10px;
+                        opacity: 0;
+                        transition: .5s;
+                    }
+                    
+                }
+            }
+            p:first-child {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                @include fontext(12px, 500, white);
+                background-color: #ffb128;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            img {
+                max-width: 325px;
+            }
+            .product__text {
+                span {
+                    display: block;
+                    @include fontext(16px, 500, #0b3954);
+                    margin: 15px 0 10px 0;
+                    text-align: center;
+                }
+                .vote {
+                    display: flex;
+                    justify-content: center;
+                    i {
+                        color: #ffb128;
+                        font-size: 13px;
+                    }
+                }
+                p {
+                    @include fontext(16px, 600, #0b3954);
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
