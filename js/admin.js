@@ -145,6 +145,9 @@ function outReceipt() {
 
 function detail(k) {
     let listOder = JSON.parse(window.localStorage.getItem('purchlistOder'));
+    listOder[k].status='Done';
+    localStorage.setItem('purchlistOder', JSON.stringify(listOder));
+    list_Oder()
     document.querySelector('.receipt').classList.add('d-block');
     document.querySelector('.prt').classList.remove('hind2');
     document.querySelector('.out').classList.remove('visi');
